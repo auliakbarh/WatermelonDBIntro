@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "845010835799",
+    "project_id": "warermelondbintro",
+    "storage_bucket": "warermelondbintro.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:845010835799:android:92a7b8e92da307e657c612",
+        "android_client_info": {
+          "package_name": "com.watermelondbintro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "845010835799-k56tv4mblbiav348j4orco67nknt20e3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.watermelondbintro",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "845010835799-1d69bmr4vo2hvpo2281nduhjkg109dnn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIu1a92a-9BLo0TCeEsJKd0IpBW-eGOEs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "845010835799-1d69bmr4vo2hvpo2281nduhjkg109dnn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

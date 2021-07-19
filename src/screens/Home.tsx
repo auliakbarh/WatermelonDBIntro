@@ -2,9 +2,9 @@ import React, {useState} from 'react';
 import {StyleSheet, SafeAreaView, Text, FlatList} from 'react-native';
 import {Button} from '@/components';
 // import {Service as DB} from '@/services';
-import {UsersSchemeName, CustomersSchemeName} from '@/models';
+import {UsersSchemeName, CustomersSchemeName} from '@/schemes';
 import MockData from '@/assets/json';
-import {UsersType, CustomersType} from '@/models';
+import {UsersType, CustomersType} from '@/schemes';
 
 interface Props {}
 

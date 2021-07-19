@@ -1,52 +1,67 @@
-export const name = 'CUSTOMERS';
-export type Customers = {
-  about: 'string';
-  address: 'string';
-  age: 'number';
-  balance: 'string';
-  company: 'string';
-  email: 'string';
-  eyeColor: 'string';
-  favoriteFruit: 'string';
-  gender: 'string';
-  greeting: 'string';
-  guid: 'string';
-  index: 'number';
-  isActive: 'boolean';
-  latitude: 'number';
-  longitude: 'number';
-  name: 'string';
-  phone: 'string';
-  picture: 'string';
-  registered: 'string';
-  _id: 'string';
-};
+import {Model} from '@nozbe/watermelondb';
+import {field} from '@nozbe/watermelondb/decorators';
+import {CustomersSchemeName} from '@/schemes';
 
-const schema = {
-  name,
-  primaryKey: '_id',
-  properties: {
-    _id: 'string',
-    name: 'string',
-    about: 'string?',
-    address: 'string?',
-    age: 'int?',
-    balance: 'string?',
-    company: 'string?',
-    email: 'string?',
-    eyeColor: 'string?',
-    favoriteFruit: 'string?',
-    gender: 'string?',
-    greeting: 'string?',
-    guid: 'string?',
-    index: 'int?',
-    isActive: 'bool?',
-    latitude: 'float?',
-    longitude: 'float?',
-    phone: 'string?',
-    picture: 'string?',
-    registered: 'string?',
-  },
-};
+export default class Customers extends Model {
+  static table = CustomersSchemeName;
 
-export default schema;
+  @field('customerId')
+  customerId!: string;
+
+  @field('name')
+  name!: string;
+
+  @field('about')
+  about!: string;
+
+  @field('address')
+  address!: string;
+
+  @field('age')
+  age!: number;
+
+  @field('balance')
+  balance!: string;
+
+  @field('company')
+  company!: string;
+
+  @field('email')
+  email!: string;
+
+  @field('eyeColor')
+  eyeColor!: string;
+
+  @field('favoriteFruit')
+  favoriteFruit!: string;
+
+  @field('gender')
+  gender!: string;
+
+  @field('greeting')
+  greeting!: string;
+
+  @field('guid')
+  guid!: string;
+
+  @field('index')
+  index!: number;
+
+  @field('is_active')
+  isActive!: boolean;
+
+  @field('latitude')
+  latitude!: number;
+
+  @field('longitude')
+  longitude!: number;
+
+  @field('phone')
+  phone!: string;
+
+  @field('picture')
+  picture!: string;
+
+  @field('registered')
+  registered!: string;
+}

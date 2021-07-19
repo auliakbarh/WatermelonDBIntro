@@ -1,24 +1,25 @@
-export const name = 'USERS';
-export type Users = {
-  id: number;
-  first_name: string;
-  last_name?: string;
-  email?: string;
-  gender?: string;
-  address?: string;
-};
+import {Model} from '@nozbe/watermelondb';
+import {field, action} from '@nozbe/watermelondb/decorators';
+import {UsersSchemeName, UsersType} from '@/schemes';
 
-const schema = {
-  name,
-  primaryKey: 'id',
-  properties: {
-    id: 'int',
-    first_name: 'string',
-    last_name: 'string?',
-    email: 'string?',
-    gender: 'string?',
-    address: 'string?',
-  },
-};
+export default class Users extends Model {
+  static table = UsersSchemeName;
 
-export default schema;
+  @field('userId')
+  userId!: number;
+
+  @field('first_name')
+  firstName!: string;
+
+  @field('last_name')
+  lastName!: string;
+
+  @field('email')
+  email!: string;
+
+  @field('gender')
+  gender!: string;
+
+  @field('address')
+  address!: string;
+}

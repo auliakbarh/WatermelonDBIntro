@@ -9,15 +9,15 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {Button, TextInput} from '@/components';
-// import {UsersService} from '@/services';
-import {UsersType} from '@/models';
+import {UsersService} from '@/services';
+import {UsersType} from '@/schemes';
 import {useNavigation} from '@react-navigation/native';
 
 interface Props {}
 
 const UserListContainer: React.FC<Props> = ({}) => {
   const navigation = useNavigation();
-  // const usersService = new UsersService();
+  const usersService = new UsersService();
 
   const deleteAll = async () => {
     // await usersService.deleteAllData();
@@ -48,14 +48,22 @@ const UserListContainer: React.FC<Props> = ({}) => {
 
   const [data, setData] = useState<UsersType[]>([]);
   const getUserObject = () => {
-    // const result = usersService.loadAllData() as UsersType[];
-    const result: any[] = [];
-    setData(result);
+    const result = usersService.loadAllData();
+    console.log(JSON.stringify(result, null, 2));
+    if (!result.error) {
+      setData(result.data);
+    }
   };
+
+  useEffect(() => {
+    getUserObject();
+  }, []);
 
   const setDataUsers = async () => {
     handlerDisabledButton('setData', true);
-    // await usersService.setDataUsers();
+    await usersService
+      .setDataUsers()
+      .then(() => handlerDisabledButton('setData', false));
   };
 
   const [selectedList, setSelectedList] = useState<number | undefined>(

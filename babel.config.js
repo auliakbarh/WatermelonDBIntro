@@ -11,12 +11,14 @@ plugins.push([
       screens: './src/screens',
       assets: './src/assets',
       json: './src/assets/json',
-      models: './src/models',
+      schemes: './src/schemes',
       components: './src/components',
       services: './src/services',
     },
   },
 ]);
+
+plugins.push(['@babel/plugin-proposal-decorators', {legacy: true}]);
 
 module.exports = {
   presets,

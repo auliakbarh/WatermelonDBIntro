@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {Button, TextInput} from '@/components';
 // import {CustomersService} from '@/services';
-import {CustomersType} from '@/models';
+import {CustomersType} from '@/schemes';
 import {useNavigation} from '@react-navigation/native';
 
 interface Props {}
